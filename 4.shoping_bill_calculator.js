@@ -34,7 +34,7 @@ function calcBill(prices, items) {
     }
   }
 
-//   console.log(itemCount);
+  //   console.log(itemCount);
 
   let total = 0;
   for (let item in itemCount) {
@@ -55,6 +55,13 @@ function calcBill(prices, items) {
 let output1 = calcBill({ pen: 10, book: 50 }, ["pen", "pen", "book", "pen"]);
 console.log(output1);
 
-let output2 = calcBill({ rice: 70, oil: 180, egg: 12, sugar: 90 }, ["egg", "egg", "rice", "oil", "egg", "sugar"]);
+let output2 = calcBill({ rice: 70, oil: 180, egg: 12, sugar: 90 }, [
+  "egg",
+  "egg",
+  "rice",
+  "oil",
+  "egg",
+  "sugar",
+]);
 
 console.log(output2);
