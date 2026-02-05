@@ -12,3 +12,41 @@
 // Test case 2
 // Input:  "Hello123"
 // Output: { valid: true, reasons: [] }
+
+function checkPassword(password) {
+  let reasons = [];
+
+  let length = password.length;
+
+  let hasUppercase = false;
+  let hasNumber = false;
+
+  for (let i = 0; i < length; i++) {
+    const charecter = password[i];
+    // console.log(charecter);
+    if (charecter >= "0" && charecter <= "9") {
+      hasNumber = true;
+    }
+    if (charecter >= "A" && charecter <= "Z") {
+      hasUppercase = true;
+    }
+  }
+  console.log(password, length, hasUppercase, hasNumber);
+
+  if (!hasNumber) {
+    reasons.push("Missing Number");
+  }
+  if (!hasUppercase) {
+    reasons.push("Missing UpperCase");
+  }
+
+  console.log(password.includes(" "))
+
+  return {
+    valid: true,
+    reasons,
+  };
+}
+
+let Output = checkPassword("helloWorld");
+console.log(Output)
